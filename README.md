@@ -1,10 +1,13 @@
 # Creating Deployments and Services
 
-
-1. Connect to cluster
+Connect to cluster
 ```
 gcloud container clusters  get-credentials {CLUSTER_NAME} --region={REGION_NAME}
 ```
+## Deployments
+
+### Creating an nginx deployment 
+
 
 2. Create a Deployment based on the YAML file: application/deployment.yaml
 
@@ -31,7 +34,7 @@ kubectl describe pod <pod-name>
 where <pod-name> is the name of one of your Pods.
 
 
-## Updating the deployment
+### Updating the deployment
 1. Apply the new YAML file:
 
 ```
@@ -43,7 +46,7 @@ kubectl apply -f application/deployment-update.yaml
 kubectl get pods -l app=nginx
 ```
 
-## Scaling the application by increasing the replica count
+### Scaling the application by increasing the replica count
 
 1. Apply the new YAML file:
 
@@ -56,13 +59,15 @@ kubectl apply -f application/deployment-scale.yaml
 kubectl get pods -l app=nginx
 ```
 
-## Deleting a deployment
+### Deleting a deployment
 
 1. Delete the deployment by name:
 ```
 kubectl delete deployment nginx-deployment
 ```
-## Creating a LoadBalancer Service
+
+## Services
+### Creating a LoadBalancer Service
 
 1. Create a Service based on the YAML file: application/service.yaml
 
