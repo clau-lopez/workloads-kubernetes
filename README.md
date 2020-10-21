@@ -74,3 +74,9 @@ kubectl delete deployment nginx-deployment
 ```
 kubectl apply -f application/service.yaml
 ```
+
+2. List the Services created
+
+```
+kubectl get services
+```
