@@ -1,6 +1,5 @@
-# deployments-kubernetes
+# Creating Deployments and Services
 
-## Creating an nginx deployment 
 
 1. Connect to cluster
 ```
@@ -62,4 +61,11 @@ kubectl get pods -l app=nginx
 1. Delete the deployment by name:
 ```
 kubectl delete deployment nginx-deployment
+```
+## Creating a LoadBalancer Service
+
+1. Create a Service based on the YAML file: application/service.yaml
+
+```
+kubectl apply -f application/service.yaml
 ```
