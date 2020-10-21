@@ -1,6 +1,6 @@
 # Creating Deployments and Services
 
-Connect to cluster
+## Connecting into GKE Cluster
 ```
 gcloud container clusters  get-credentials {CLUSTER_NAME} --region={REGION_NAME}
 ```
@@ -9,24 +9,24 @@ gcloud container clusters  get-credentials {CLUSTER_NAME} --region={REGION_NAME}
 ### Creating an nginx deployment 
 
 
-2. Create a Deployment based on the YAML file: application/deployment.yaml
+1. Create a Deployment based on the YAML file: application/deployment.yaml
 
 ```
 kubectl apply -f application/deployment.yaml
 ```
 
-3. Display information about the Deployment:
+2. Display information about the Deployment:
 
 ```
 kubectl describe deployment nginx-deployment
 
 ```
-4. List the Pods created by the deployment:
+3. List the Pods created by the deployment:
 
 ```
 kubectl get pods -l app=nginx
 ```
-5. Display information about a Pod:
+4. Display information about a Pod:
 
 ```
 kubectl describe pod <pod-name>
