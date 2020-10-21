@@ -80,3 +80,11 @@ kubectl apply -f application/service.yaml
 ```
 kubectl get services
 ```
+
+### Deleting a Service
+
+1. Delete the service by name:
+```
+kubectl delete services myapp-service
+```
+
