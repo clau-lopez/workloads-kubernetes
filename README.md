@@ -7,10 +7,10 @@
 gcloud container clusters  get-credentials {CLUSTER_NAME} --region={REGION_NAME}
 ```
 
-2. Create a Deployment based on the YAML file: https://github.com/colopezfuentes/deployments-kubernetes/blob/main/application/deployment.yaml
+2. Create a Deployment based on the YAML file: application/deployment.yaml
 
 ```
-kubectl apply -f https://github.com/colopezfuentes/deployments-kubernetes/blob/main/application/deployment.yaml
+kubectl apply -f application/deployment.yaml
 ```
 
 3. Display information about the Deployment:
@@ -36,7 +36,7 @@ where <pod-name> is the name of one of your Pods.
 1. Apply the new YAML file:
 
 ```
-kubectl apply -f {DEPLOYMENT_UPDATE_FILE}
+kubectl apply -f application/deployment-update.yaml
 ```
 2. Watch the deployment create pods with new names and delete the old pods:
 
@@ -49,7 +49,7 @@ kubectl get pods -l app=nginx
 1. Apply the new YAML file:
 
 ``` 
-kubectl apply -f {DEPLOYMENT_SCALE_FILE}
+kubectl apply -f application/deployment-scale.yaml
 ```
 
 2. Verify that the Deployment has four Pods:
