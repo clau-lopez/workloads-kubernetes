@@ -32,3 +32,34 @@ kubectl describe pod <pod-name>
 where <pod-name> is the name of one of your Pods.
 
 
+## Updating the deployment
+1. Apply the new YAML file:
+
+```
+kubectl apply -f {DEPLOYMENT_UPDATE_FILE}
+```
+2. Watch the deployment create pods with new names and delete the old pods:
+
+```
+kubectl get pods -l app=nginx
+```
+
+## Scaling the application by increasing the replica count
+
+1. Apply the new YAML file:
+
+``` 
+kubectl apply -f {DEPLOYMENT_SCALE_FILE}
+```
+
+2. Verify that the Deployment has four Pods:
+```
+kubectl get pods -l app=nginx
+```
+
+## Deleting a deployment
+
+1. Delete the deployment by name:
+```
+kubectl delete deployment nginx-deployment
+```
